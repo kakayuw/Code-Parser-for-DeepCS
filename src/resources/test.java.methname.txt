@@ -1,0 +1,139 @@
+on request permissions result
+limit
+limit
+floor
+ceil
+delete duplicated pages
+calculate indexes in duplicate array
+contains thumbnail
+add without duplicates
+load whole page
+load page center
+load page end
+load page start
+recalculate page sizes
+get max page size
+get page length
+get page offset
+get secondary page offset
+determine valid page number from
+pdfview
+jump to
+get position offset
+set position offset
+compute scroll
+draw part
+load pages
+load complete
+on bitmap rendered
+move to
+perform page snap
+find snap edge
+snap offset for page
+page fills screen
+move relative to
+zoom to
+zoom centered to
+zoom centered relative to
+document fits view
+get page at position offset
+get document meta
+get table of contents
+get links
+from asset
+from file
+from uri
+from bytes
+from stream
+from source
+on tap
+on long press
+on error
+on page error
+on page changed
+on page scrolled
+on initially rendered
+load complete
+on layer drawn
+set scroll
+setup layout
+destroy layout
+set page num
+shown
+show
+hide
+hide delayed
+set text size
+handle link event
+enable characteristic notify
+disable characteristic notify
+set characteristic notification
+enable characteristic indicate
+disable characteristic indicate
+set characteristic indication
+write characteristic
+read characteristic
+read remote rssi
+set mtu
+handle characteristic notify callback
+handle characteristic indicate callback
+handle characteristic write callback
+handle characteristic read callback
+handle rssiread callback
+handle set mtu callback
+get context
+get bluetooth manager
+get bluetooth adapter
+get scan rule config
+get multiple bluetooth controller
+init scan rule
+get max connect count
+set max connect count
+get operate timeout
+set operate timeout
+get re connect count
+get re connect interval
+set re connect count
+set re connect count
+get split write num
+set split write num
+get connect over time
+set connect over time
+enable log
+scan
+scan and connect
+connect
+connect
+cancel scan
+notify
+indicate
+stop notify
+stop indicate
+write
+write
+read
+read rssi
+set mtu
+is support ble
+enable bluetooth
+disable bluetooth
+is blue enable
+get connect state
+parse trie
+do parse trie to builder
+parse trie
+do parse trie to builder
+ceiling power of two
+floor power of two
+is power of two
+log2
+log10
+sqrt
+divide
+factorial
+binomial
+paired stats
+count
+x stats
+y stats
+population covariance

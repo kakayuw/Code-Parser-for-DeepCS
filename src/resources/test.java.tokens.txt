@@ -1,0 +1,139 @@
+ request code package manager length permission launch picker grant results granted
+ number between
+ number between
+ big enough floor value
+ big enough ceil value
+ add result current pages last size get integer
+ result original pages length index user
+ null part equals bounds false true fake page thumbnails relative
+ add rendered part get bitmap equals recycle page collection
+ size load nb grid part loadable parts calculate page rows cols
+ col last part loadable holder size load nb grid parts calculate page row first
+ col part loadable holder vertical rows view pdf size load nb swipe grid parts calculate page row cols first
+ col last part loadable holder vertical rows view pdf size load nb swipe grid parts calculate page row cols
+ add calculator prepare auto original optimal offset max clear fit view spacing pages size sizes len get width doc page calculate policy height
+ size max width vertical page height
+ size get width index vertical zoom page height
+ offsets document get index doc zoom page
+ size max get width index zoom vertical page float height
+ pages original null get count length page user
+ pdfium pinch handler cache debug manager edit loader false paint rendering draw thread stroke animation mode super core pages context style drag
+ move offset manager determine yoffset start show xoffset vertical zoom yanimation float animation valid number current pdf file xanimation null swipe get from page
+ offset yoffset xoffset vertical zoom float current pdf file len swipe utils get width limit doc math height
+ move offset yoffset xoffset handle vertical zoom current pdf file load len swipe get width doc progress page height
+ super compute mode manager edit scroll fling animation
+ color dst yoffset part paint scale vertical float local translate mode red rect current file recycled top get bitmap constants height canvas debug offset max src bottom xoffset zoom draw right pdf size rendered blue left swipe translation bounds width page relative
+ msg handler cache manager loader rendering remove redraw anew pages task pdf file load null messages render make
+ handler alive callbacks looper loaded default pages file load enable get state drag jump init pinch manager scroll count start false handle rendering thread call layout pdf null true setup page complete
+ thumbnail cache manager part count callbacks loaded call redraw pages pdf file shown get state render
+ scaled yoffset document callbacks scale vertical none float dir content current view file len get end height move offset max scroll xoffset start handle zoom fits call redraw pdf null swipe width doc page position
+ yoffset focus yanimation vertical none float edge current pages file xanimation find get manager offset center count start xoffset animation pdf null swipe page snap
+ offset yoffset center length xoffset start vertical zoom none float edge current pdf file swipe get width end page snap height
+ offset center length index vertical zoom float edge pdf file 2f swipe get width end page snap height
+ offset yoffset start xoffset length zoom vertical float current pdf file swipe get width end page height
+ current move dx dy yoffset xoffset
+ zoom
+ current move yoffset xoffset pivot zoom float dzoom base
+ centered pivot zoom dzoom
+ pdf file len swipe get width doc vertical float height
+ pdf file offset len get doc zoom page position
+ pdf file null data meta get
+ bookmarks pdf file null collections get empty
+ pdf file null collections get links page empty
+ configurator name source asset
+ configurator file source
+ configurator source uri
+ configurator bytes byte source
+ input configurator stream source
+ configurator doc source
+ tap boolean motion event
+ motion press event long
+ throwable error
+ throwable page error
+ count page changed
+ offset page scrolled position float
+ pages rendered nb initially
+ pages load nb complete
+ displayed canvas width page float drawn layer height
+ scroll position float
+ layout view pdf pdfview setup
+ layout destroy
+ num page
+ boolean shown
+ show
+ hide
+ hide delayed
+ typed unit view size complex dip text value
+ tap link handle event
+ other gatt handle uuid characteristic notify notification bluetooth null failure get property true callback ble properties
+ notification bluetooth null get false property gatt characteristic properties notify
+ msg other descriptor uuid characteristic notify notification enable get client ble write value init false gatt boolean form bluetooth null failure disable callback success1 config success2
+ other gatt handle uuid characteristic notify bluetooth null failure get property true callback indicate ble indication properties
+ bluetooth null get false property gatt indication characteristic properties notify
+ msg other descriptor uuid characteristic notification enable get client ble indicate write value init false gatt boolean form bluetooth null failure disable callback indication success1 config success2
+ msg init other data length handle gatt uuid characteristic bluetooth null failure response get property callback ble write value properties
+ msg init other read gatt handle uuid characteristic bluetooth null failure get property callback ble properties
+ msg rssiread init rssi other read handle gatt remote null bluetooth failure callback ble
+ msg request init codes other handle lollipop gatt version required mtu mtufailure null bluetooth build callback ble sdk changed
+ add msg obtain handler init instance manager start delayed message uuid notify timeout operate null bluetooth get callback ble cha send key
+ add msg obtain handler init instance manager start delayed message uuid timeout operate null bluetooth get callback indicate ble send cha key
+ msg add obtain handler init instance manager start delayed message uuid timeout operate null bluetooth get callback ble write cha send key
+ msg add obtain handler init read instance manager start delayed message uuid timeout operate null bluetooth get callback ble cha send key
+ msg add obtain init handler rssi read instance manager start delayed message timeout operate null bluetooth get callback ble send
+ add msg obtain handler init instance manager start delayed message timeout mtu operate null bluetooth get callback ble send changed
+ context
+ bluetooth manager
+ adapter bluetooth
+ scan rule ble config
+ controller bluetooth multiple
+ scan rule ble config
+ max count connect
+ default max multiple count device connect
+ operate timeout
+ operate count timeout
+ re count connect
+ re interval connect
+ default re count interval connect retry
+ re count interval connect 10
+ split num write
+ split num write
+ over time connect
+ over 100 time connect
+ print log enable ble
+ argument instance log scan rule uuid mac long out enable get scanner ble fuzzy false started illegal names boolean blue null throw service callback time device config uuids
+ argument instance log scan rule uuid mac long out enable get scanner ble fuzzy connect false started illegal names boolean blue null throw service callback time device config uuids
+ auto other argument log scan rule main looper enable get ble connect controller multiple gatt my illegal fail boolean bluetooth blue null build throw callback connecting device config
+ adapter bluetooth null get callback ble gatt remote device mac connect
+ instance stop get scanner scan le ble
+ other controller argument multiple uuid illegal notify characteristic connector bluetooth null throw failure service enable get callback ble uuidstring device
+ other controller argument multiple uuid illegal characteristic connector bluetooth null throw enable failure service get callback indicate ble uuidstring device
+ controller false multiple uuid remove notify characteristic boolean connector bluetooth null disable service success get callback ble uuidstring device
+ controller false multiple uuid remove characteristic boolean connector bluetooth null service success disable get callback indicate ble uuidstring device
+ data service true callback ble uuid device write
+ other argument data log uuid characteristic split get ble write controller multiple length illegal bluetooth connector null throw service failure callback uuidstring writer device 20
+ other controller argument read multiple uuid illegal characteristic connector bluetooth null throw failure service get callback ble uuidstring device
+ rssi other controller argument read multiple remote illegal connector bluetooth null throw failure get callback ble device
+ other controller argument log max multiple illegal mtu mtufailure default connector bluetooth null throw get callback ble device
+ codes package manager mr2 version system feature bluetooth application build get context le jelly sdk has bean
+ adapter null bluetooth enable
+ adapter null bluetooth disable enabled
+ adapter null bluetooth enabled
+ disconnected null bluetooth manager profile get ble connection gatt state device
+ length do parse suffix type trie sequence immutable len build lists builder char idx map encoded linked
+ sub stack code prefix do suffix type put remove len builder from join add break length start parse trie reverse sequence domain joiner char idx encoded
+ length do parse suffix type trie sequence immutable len build lists builder char idx map encoded linked
+ sub stack code prefix do suffix type put remove len builder from join add break length start parse trie reverse sequence domain joiner char idx encoded
+ zero mode ceiling big rounding integer bit log2
+ zero mode big rounding integer floor bit log2
+ signum null get length check bit lowest
+ big compare half log shift threshold integer bit error down two switch mode default pow assertion sqrt2 up power floor x2floor case ceiling length bits unnecessary rounding check positive right precompute null even throw x2 precomputed
+ next big compare ln half log log10 cmp do integer error down long switch mode default pow assertion divide up power floor log2 multiply ten value case 10 ceiling unnecessary rounding check positive fits even throw equals squared x2 math approx
+ big compare half integer error non down long switch mode default negative sqrt pow assertion up floor value case add ceiling one unnecessary rounding check fits square boolean even throw equals exact math
+ mode big dec exact divide integer decimal
+ next big bignums normalized tz shift num integer non two long number negative trailing factorials divide power floor log2 value add ceiling product bits length check zeros size left math starting approx
+ big argument integer non long mode negative binomials biggest divide accum log2 multiply value ceiling one length bits rounding binomial check numerator denominator size math
+ stats sum deltas products
+ stats count
+ stats
+ stats
+ count sum check state deltas products

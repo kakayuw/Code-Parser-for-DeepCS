@@ -1,0 +1,139 @@
+Listener for response to user permission request
+Limits the given <b>number<b> between the other values
+Limits the given <b>number<b> between the other values
+Returns the largest integer less than or equal to the specified float. This method will only properly floor floats from
+Returns the smallest integer greater than or equal to the specified float. This method will only properly ceil floats from
+Transforms (0,1,2,2,3) to (0,1,2,3)
+Transforms (0, 4, 4, 6, 6, 6, 3) into (0, 1, 1, 2, 2, 2, 3)
+Return true if already contains the described PagePart
+Add part if it doesn't exist, recycle bitmap otherwise
+When whole page is visible
+When only part of one page is visible
+When only end of page is visible
+If only start of the page is visible
+Call after view size change to recalculate page sizes, offsets and document length
+get page size with biggest dimension (width in vertical mode and height in horizontal mode)
+Get the page's height if swiping vertical, or width if swiping horizontal.
+Get primary page offset, that is Y for vertical scroll and X for horizontal scroll
+Get secondary page offset, that is X for vertical scroll and Y for horizontal scroll
+Given the UserPage number, this method restrict it
+Construct the initial view
+Go to the given page.
+Get current position as ratio of document length to visible area.
+progress   must be between 0 and 1
+Handle fling animation
+Draw a given PagePart on the canvas
+Load all the parts around the center of the screen,
+Called when the PDF is loaded
+Called when a rendering task is over and
+Move to the given X and Y offsets, but check them ahead of time
+Animate to the nearest snapping position for the current SnapPolicy
+Find the edge to snap to when showing the specified page
+Get the offset to move to in order to snap to the page
+ true if single page fills the entire screen in the scrolling direction
+Move relatively to the current position.
+Change the zoom level
+Change the zoom level, relatively to a pivot point.
+@see #zoomCenteredTo(float,PointF)
+Checks if whole document can be displayed on screen, doesn't include zoom
+Get page number at given offset
+Returns null if document is not loaded
+Will be empty until document is loaded
+Will be empty until document is loaded
+Use an asset file as the pdf source
+Use a file as the pdf source
+Use URI as the pdf source, for use with content providers
+Use bytearray as the pdf source, documents is not saved
+Use stream as the pdf source. Stream will be written to bytearray, because native code does not support Java Streams
+Use custom source as pdf source
+Called when the user has a tap gesture, before processing scroll handle toggling
+Called when the user has a long tap gesture, before processing scroll handle toggling
+Called if error occurred while opening PDF
+Called if error occurred while loading PDF page
+Called when the user use swipe to change page
+Called on every move while scrolling
+Called only once, when document is rendered
+Called when the PDF is loaded
+This method is called when the PDFView is
+Used to move the handle, called internally by PDFView
+Method called by PDFView after setting scroll handle.
+Method called by PDFView when handle should be removed from layout
+Set page number displayed on handle
+Get handle visibility
+Show handle
+Hide handle immediately
+Hide handle after some time (defined by implementation)
+size text size in dp
+Called when link was tapped by user
+notify
+stop notify
+notify setting
+indicate
+stop indicate
+indicate setting
+write
+read
+rssi
+set mtu
+notify
+indicate
+write
+read
+rssi
+set mtu
+Get the Context
+Get the BluetoothManager
+Get the BluetoothAdapter
+get the ScanRuleConfig
+Get the multiple Bluetooth Controller
+Configure scan and connection properties
+Get the maximum number of connections
+Set the maximum number of connections
+Get operate timeout
+Set operate timeout
+Get connect retry count
+Get connect retry interval
+Set connect retry count and interval
+Set connect retry count and interval
+Get operate split Write Num
+Set split Writ eNum
+Get operate connect Over Time
+Set connect Over Time
+print log?
+scan device around
+scan device then connect
+connect a known device
+connect a device through its mac without scan,whether or not it has been connected
+Cancel scan
+notify
+indicate
+stop notify, remove callback
+stop indicate, remove callback
+write
+write
+read
+read Rssi
+set Mtu
+is support ble?
+Open bluetooth
+Disable bluetooth
+judge Bluetooth is enable
+bleDevice
+Parses a serialized trie representation of a map of reversed public suffixes into an immutable
+Parses a trie node and returns the number of characters consumed.
+Parses a serialized trie representation of a map of reversed public suffixes into an immutable
+Parses a trie node and returns the number of characters consumed.
+Returns the smallest power of two greater than or equal to  x. This is equivalent to BigInteger.valueOf(2).pow(log2(x, CEILING)).
+Returns the largest power of two less than or equal to  x. This is equivalent to BigInteger.valueOf(2).pow(log2(x, FLOOR)).
+Returns  true if  x represents a power of two.
+Returns the base-2 logarithm of  x, rounded according to the specified rounding mode.
+Returns the base-10 logarithm of  x, rounded according to the specified rounding mode.
+Returns the square root of  x, rounded with the specified rounding mode.
+Returns the result of dividing  p by  q, rounding using the specified RoundingMode.
+Returns  n!, that is, the product of the first  n positive integers, or  1if  n == 0.
+Returns  n choose  k, also known as the binomial coefficient of  n and k, that is,  n!  (k! (n - k)!).
+Internal constructor. Users should use  PairedStatsAccumulator#snapshot.
+Returns the number of pairs in the dataset.
+Returns the statistics on the  x values alone.
+Returns the statistics on the  y values alone.
+Returns

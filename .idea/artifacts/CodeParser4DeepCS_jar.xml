@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CodeParser4DeepCS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CodeParser4DeepCS_jar</output-path>
+    <root id="archive" name="CodeParser4DeepCS.jar">
+      <element id="module-output" name="CodeParser4DeepCS" />
+    </root>
+  </artifact>
+</component>

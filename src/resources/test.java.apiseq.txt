@@ -1,0 +1,139 @@
+ launchPicker
+
+
+ return
+ return
+ result.add result.size result.size result.get
+
+ PagePart synchronized PagePart.equals
+ PagePart.equals PagePart.getRenderedBitmap PagePart.recycle collection.add
+ calculatePartSize loadPage
+ calculatePartSize loadPage
+ calculatePartSize pdfView.isSwipeVertical loadPage loadPage
+ calculatePartSize pdfView.isSwipeVertical loadPage loadPage
+ pageSizes.clear PageSizeCalculator PageSizeCalculator.getOptimalMaxWidthPageSize PageSizeCalculator.getOptimalMaxHeightPageSize PageSizeCalculator.calculate pageSizes.add prepareAutoSpacing prepareDocLen preparePagesOffset
+
+ getPageSize SizeF.getHeight SizeF.getWidth return
+ documentPage pageOffsets.get
+ getPageSize getMaxPageWidth SizeF.getWidth getMaxPageHeight SizeF.getHeight
+ getPagesCount getPagesCount
+ super HandlerThread isInEditMode CacheManager AnimationManager DragPinchManager PagesLoader Paint Paint debugPaint.setStyle PdfiumCore setWillNotDraw
+ pdfFile.determineValidPageNumberFrom pdfFile.getPageOffset animationManager.startYAnimation moveTo animationManager.startXAnimation moveTo showPage
+ pdfFile.getDocLen getHeight pdfFile.getDocLen getWidth MathUtils.limit
+ pdfFile.getDocLen getHeight pdfFile.getDocLen moveTo pdfFile.getDocLen getWidth pdfFile.getDocLen moveTo loadPageByOffset
+ super.computeScroll isInEditMode animationManager.computeFling
+ PagePart.getPageRelativeBounds PagePart.getRenderedBitmap Bitmap.isRecycled PagePart.getPage pdfFile.getPageSize PagePart.getPage pdfFile.getPageOffset pdfFile.getMaxPageWidth SizeF.getWidth toCurrentScale PagePart.getPage pdfFile.getPageOffset pdfFile.getMaxPageHeight SizeF.getHeight toCurrentScale Canvas.translate Bitmap.getWidth Bitmap.getHeight Rect SizeF.getWidth toCurrentScale SizeF.getHeight toCurrentScale RectF.width SizeF.getWidth toCurrentScale RectF.height SizeF.getHeight toCurrentScale RectF getWidth getHeight Canvas.translate Canvas.drawBitmap PagePart.getPage debugPaint.setColor Canvas.drawRect Canvas.translate
+ renderingHandler.removeMessages cacheManager.makeANewSet pagesLoader.loadPages redraw
+ renderingHandlerThread.isAlive renderingHandlerThread.start renderingHandlerThread.getLooper RenderingHandler renderingHandler.start scrollHandle.setupLayout dragPinchManager.enable PdfFile.getPagesCount callbacks.callOnLoadComplete jumpTo
+ pdfFile.getPagesCount callbacks.callOnRender PagePart.isThumbnail cacheManager.cacheThumbnail cacheManager.cachePart redraw
+ pdfFile.getMaxPageWidth toCurrentScale getWidth getWidth getWidth getWidth pdfFile.getDocLen getHeight getHeight getHeight getHeight pdfFile.getMaxPageHeight toCurrentScale getHeight getHeight getHeight getHeight pdfFile.getDocLen getWidth getWidth getWidth getWidth getPositionOffset documentFitsView scrollHandle.setScroll getCurrentPage callbacks.callOnPageScroll redraw
+ pdfFile.getPagesCount findFocusPage findSnapEdge snapOffsetForPage animationManager.startYAnimation animationManager.startXAnimation
+ pdfFile.getPageOffset getHeight getWidth pdfFile.getPageLength
+ pdfFile.getPageOffset getHeight getWidth pdfFile.getPageLength
+ pdfFile.getPageOffset pdfFile.getPageLength isSwipeVertical getHeight getWidth
+ moveTo
+
+ zoomTo moveTo
+ zoomCenteredTo
+ pdfFile.getDocLen getHeight getWidth
+ pdfFile.getDocLen pdfFile.getPageAtOffset
+ pdfFile.getMetaData
+ Collections.emptyList pdfFile.getBookmarks
+ Collections.emptyList pdfFile.getPageLinks
+ AssetSource.new Configurator
+ FileSource.new Configurator
+ UriSource.new Configurator
+ ByteArraySource.new Configurator
+ InputStreamSource.new Configurator
+ Configurator
+ onTap
+ onLongPress
+ onError
+ onPageError
+ onPageChanged
+ onPageScrolled
+ onInitiallyRendered
+ loadComplete
+ onLayerDrawn
+ setScroll
+ setupLayout
+ destroyLayout
+ setPageNum
+ shown
+ show
+ hide
+ hideDelayed
+ textView.setTextSize
+ handleLinkEvent
+ handleCharacteristicNotifyCallback setCharacteristicNotification OtherException.new
+ setCharacteristicNotification
+ notifyMsgInit OtherException.new BluetoothGatt.setCharacteristicNotification notifyMsgInit OtherException.new formUUID BluetoothGattCharacteristic.getDescriptor notifyMsgInit OtherException.new BluetoothGattDescriptor.setValue BluetoothGatt.writeDescriptor notifyMsgInit OtherException.new
+ handleCharacteristicIndicateCallback setCharacteristicIndication OtherException.new
+ setCharacteristicIndication
+ indicateMsgInit OtherException.new BluetoothGatt.setCharacteristicNotification indicateMsgInit OtherException.new formUUID BluetoothGattCharacteristic.getDescriptor indicateMsgInit OtherException.new BluetoothGattDescriptor.setValue BluetoothGatt.writeDescriptor indicateMsgInit OtherException.new
+ OtherException.new OtherException.new mCharacteristic.setValue handleCharacteristicWriteCallback mBluetoothGatt.writeCharacteristic writeMsgInit OtherException.new OtherException.new
+ handleCharacteristicReadCallback mBluetoothGatt.readCharacteristic readMsgInit OtherException.new OtherException.new
+ handleRSSIReadCallback mBluetoothGatt.readRemoteRssi rssiMsgInit OtherException.new
+ handleSetMtuCallback mBluetoothGatt.requestMtu mtuChangedMsgInit OtherException.new OtherException.new
+ notifyMsgInit BleNotifyCallback.setKey BleNotifyCallback.setHandler mBleBluetooth.addNotifyCallback mHandler.obtainMessage BleManager.getInstance BleManager.getOperateTimeout mHandler.sendMessageDelayed
+ indicateMsgInit BleIndicateCallback.setKey BleIndicateCallback.setHandler mBleBluetooth.addIndicateCallback mHandler.obtainMessage BleManager.getInstance BleManager.getOperateTimeout mHandler.sendMessageDelayed
+ writeMsgInit BleWriteCallback.setKey BleWriteCallback.setHandler mBleBluetooth.addWriteCallback mHandler.obtainMessage BleManager.getInstance BleManager.getOperateTimeout mHandler.sendMessageDelayed
+ readMsgInit BleReadCallback.setKey BleReadCallback.setHandler mBleBluetooth.addReadCallback mHandler.obtainMessage BleManager.getInstance BleManager.getOperateTimeout mHandler.sendMessageDelayed
+ rssiMsgInit BleRssiCallback.setHandler mBleBluetooth.addRssiCallback mHandler.obtainMessage BleManager.getInstance BleManager.getOperateTimeout mHandler.sendMessageDelayed
+ mtuChangedMsgInit BleMtuChangedCallback.setHandler mBleBluetooth.addMtuChangedCallback mHandler.obtainMessage BleManager.getInstance BleManager.getOperateTimeout mHandler.sendMessageDelayed
+
+
+
+
+
+
+
+
+
+
+
+
+ setReConnectCount
+
+
+
+
+
+
+ IllegalArgumentException isBlueEnable BleLog.e BleScanCallback.onScanStarted bleScanRuleConfig.getServiceUuids bleScanRuleConfig.getDeviceNames bleScanRuleConfig.getDeviceMac bleScanRuleConfig.isFuzzy bleScanRuleConfig.getScanTimeOut BleScanner.getInstance BleScanner.scan
+ IllegalArgumentException isBlueEnable BleLog.e BleScanAndConnectCallback.onScanStarted bleScanRuleConfig.getServiceUuids bleScanRuleConfig.getDeviceNames bleScanRuleConfig.getDeviceMac bleScanRuleConfig.isFuzzy bleScanRuleConfig.getScanTimeOut BleScanner.getInstance BleScanner.scanAndConnect
+ IllegalArgumentException isBlueEnable BleLog.e OtherException.new BleGattCallback.onConnectFail Looper.myLooper Looper.myLooper Looper.getMainLooper BleLog.w BleDevice.getDevice OtherException.new BleGattCallback.onConnectFail multipleBluetoothController.buildConnectingBle bleScanRuleConfig.isAutoConnect BleBluetooth.connect
+ getBluetoothAdapter getBluetoothAdapter.getRemoteDevice BleDevice connect
+ BleScanner.getInstance BleScanner.stopLeScan
+ IllegalArgumentException multipleBluetoothController.getBleBluetooth OtherException.new BleNotifyCallback.onNotifyFailure BleBluetooth.newBleConnector BleBluetooth.withUUIDString BleBluetooth.enableCharacteristicNotify
+ IllegalArgumentException multipleBluetoothController.getBleBluetooth OtherException.new BleIndicateCallback.onIndicateFailure BleBluetooth.newBleConnector BleBluetooth.withUUIDString BleBluetooth.enableCharacteristicIndicate
+ multipleBluetoothController.getBleBluetooth BleBluetooth.newBleConnector BleBluetooth.withUUIDString BleBluetooth.disableCharacteristicNotify BleBluetooth.removeNotifyCallback
+ multipleBluetoothController.getBleBluetooth BleBluetooth.newBleConnector BleBluetooth.withUUIDString BleBluetooth.disableCharacteristicIndicate BleBluetooth.removeIndicateCallback
+ write
+ IllegalArgumentException BleLog.e OtherException.new BleWriteCallback.onWriteFailure BleLog.w multipleBluetoothController.getBleBluetooth OtherException.new BleWriteCallback.onWriteFailure SplitWriter SplitWriter.splitWrite BleBluetooth.newBleConnector BleBluetooth.withUUIDString BleBluetooth.writeCharacteristic
+ IllegalArgumentException multipleBluetoothController.getBleBluetooth OtherException.new BleReadCallback.onReadFailure BleBluetooth.newBleConnector BleBluetooth.withUUIDString BleBluetooth.readCharacteristic
+ IllegalArgumentException multipleBluetoothController.getBleBluetooth OtherException.new BleRssiCallback.onRssiFailure BleBluetooth.newBleConnector BleBluetooth.readRemoteRssi
+ IllegalArgumentException BleLog.e OtherException.new BleMtuChangedCallback.onSetMTUFailure BleLog.e OtherException.new BleMtuChangedCallback.onSetMTUFailure multipleBluetoothController.getBleBluetooth OtherException.new BleMtuChangedCallback.onSetMTUFailure BleBluetooth.newBleConnector BleBluetooth.setMtu
+ context.getApplicationContext context.getPackageManager context.hasSystemFeature
+ bluetoothAdapter.enable
+
+ bluetoothAdapter.isEnabled
+ BleDevice.getDevice bluetoothManager.getConnectionState
+ ImmutableMap.builder CharSequence.length newLinkedList doParseTrieToBuilder builder.build
+ CharSequence.length CharSequence.charAt CharSequence.subSequence reverse stack.add PREFIX_JOINER.join String.length PublicSuffixType.fromCode builder.put doParseTrieToBuilder CharSequence.charAt CharSequence.charAt stack.remove
+ ImmutableMap.builder CharSequence.length newLinkedList doParseTrieToBuilder builder.build
+ CharSequence.length CharSequence.charAt CharSequence.subSequence reverse stack.add PREFIX_JOINER.join String.length PublicSuffixType.fromCode builder.put doParseTrieToBuilder CharSequence.charAt CharSequence.charAt stack.remove
+ log2 BigInteger.ZERO.setBit
+ log2 BigInteger.ZERO.setBit
+ checkNotNull BigInteger.signum BigInteger.getLowestSetBit BigInteger.bitLength
+ checkNotNull checkPositive BigInteger.bitLength switch isPowerOfTwo checkRoundingUnnecessary isPowerOfTwo SQRT2_PRECOMPUTED_BITS.shiftRight BigInteger.compareTo BigInteger.pow BigInteger.bitLength return AssertionError
+ checkPositive fitsInLong BigInteger.longValue LongMath.log10 log2 BigInteger.TEN.pow BigInteger.compareTo BigInteger.divide BigInteger.compareTo BigInteger.TEN.multiply BigInteger.compareTo BigInteger.TEN.multiply BigInteger.compareTo switch checkRoundingUnnecessary BigInteger.equals BigInteger.pow BigInteger.pow BigInteger.multiply BigInteger.compareTo return AssertionError
+ checkNonNegative fitsInLong BigInteger.longValue LongMath.sqrt BigInteger.valueOf sqrtFloor switch BigInteger.pow BigInteger.equals checkRoundingUnnecessary BigInteger.intValue BigInteger.intValue BigInteger.add BigInteger.pow BigInteger.add BigInteger.compareTo return BigInteger.add AssertionError
+ BigDecimal BigDecimal BigDecimal.divide BigDecimal.toBigIntegerExact
+ checkNonNegative BigInteger.valueOf IntMath.log2 IntMath.divide Long.numberOfTrailingZeros LongMath.log2 LongMath.log2 Long.numberOfTrailingZeros BigInteger.valueOf bignums.add LongMath.log2 BigInteger.valueOf bignums.add listProduct listProduct.shiftLeft
+ checkNonNegative checkNonNegative checkArgument LongMath.binomial BigInteger.valueOf LongMath.log2 BigInteger.valueOf BigInteger.multiply BigInteger.valueOf BigInteger.divide BigInteger.valueOf BigInteger.multiply BigInteger.valueOf BigInteger.divide
+
+ xStats.count
+
+
+ count checkState count
