@@ -6,6 +6,8 @@ This tool is to parse line of java code and generate parsed result that includes
 More Detail could be seen via [Deep Code Search](https://guxd.github.io/papers/deepcs.pdf "2018 ICSE").
 This paper will introduce what make up of API sequence and tokens as well as why they are important.
 
+### Input Prerequisite
+The input should be a line of java code that starts from return type and end with brace. The line MUST contains only one java method and without any commented out code(easy to do using RE)
 ### Usage
 Demo code:
 ```
