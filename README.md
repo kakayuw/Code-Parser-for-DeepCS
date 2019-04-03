@@ -26,3 +26,6 @@ So for eaze to use regular expression to extract API with parenthesis feature, I
   3. erase all string content in double quote or sincle quote cause they contribute nothing to API sequence
   
 Then I use regular expression to catch method names, nested APIs and tokens with their corresponding feature regarding parenthesis. And the fact proofs that these work can nearly satisfy my requirement.
+
+### Paper Reference
+[Deep code search Gu et al., ICSE’18](https://guxd.github.io/papers/deepcs.pdf "DeepCS 2018 ICSE").
