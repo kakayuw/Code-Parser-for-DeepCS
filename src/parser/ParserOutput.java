@@ -1,5 +1,7 @@
 package parser;
 
+import com.sun.deploy.util.StringUtils;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -97,7 +99,8 @@ public class ParserOutput {
      * @param tokensBw
      * @throws IOException
      */
-    public void generateTestFile(BufferedWriter methnameBw, BufferedWriter apiseqBw, BufferedWriter tokensBw) throws IOException {
+    public void generateTestFile(BufferedWriter methnameBw, BufferedWriter apiseqBw, BufferedWriter tokensBw, BufferedWriter methbodyBw) throws IOException {
+        if (apiseq.isEmpty() && methodname.length() == 0 && tokens.isEmpty()) return;
         methnameBw.write(methodname);
         methnameBw.newLine();
         for (String api : apiseq) {
@@ -108,5 +111,27 @@ public class ParserOutput {
             tokensBw.write(" " +token);
         }
         tokensBw.newLine();
+        methbodyBw.write(getInBraceLine(inputLine));
+        methbodyBw.newLine();
     }
+
+
+    public IndexedCode generateParsedCode(int id) {
+        IndexedCode code = new IndexedCode();
+        code.methname = methodname;
+        code.apiseq = Util.join(apiseq, " ");
+        code.tokens = Util.join(tokens, " ");
+        code.methbody = getInBraceLine(inputLine).trim();
+        code.id = id;
+        return code;
+    }
+
+    public class IndexedCode{
+        public String methbody;
+        public String apiseq;
+        public String tokens;
+        public String methname;
+        public  int id;
+    }
+
 }

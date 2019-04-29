@@ -12,18 +12,64 @@ public class JavaParser {
 
     final String notFound = "Mathch Not Found";
 
-    public ParserOutput parseOne(String javaLine) {
+    public ParserOutput parseOne(String javaLine) throws Exception {
         System.out.println("Received line: " + javaLine);
         ParserOutput po = new ParserOutput();
         po.setInputLine(javaLine);
         javaLine = Util.preProcess(javaLine);
         System.out.println("Except for: " + javaLine);
+        // return if contains annotation
+//        if (javaLine.contains("@")) return po;
+        javaLine = javaLine.replace('@', ' ');
         // find method name using re
         po.setMethodname(reFindMethodName(javaLine));
         // find apiseq using re
-        po.setApiseq(reFindApiseq(javaLine));
+        po.setApiseq(reFindApiseq(javaLine, true));
         // find tokens using re
         po.setTokens(reFindTokens(javaLine));
+        po.printStatus();
+        System.out.println();
+        return po;
+    }
+
+    public ParserOutput parseOneNoScreenOutput(String javaLine) throws Exception {
+//        System.out.println("Received line: " + javaLine);
+        ParserOutput po = new ParserOutput();
+        po.setInputLine(javaLine);
+        javaLine = Util.preProcess(javaLine);
+//        System.out.println("Except for: " + javaLine);
+        // return if contains annotation
+        javaLine = javaLine.replace('@', ' ');
+        // find method name using re
+        po.setMethodname(reFindMethodName(javaLine));
+        // find apiseq using re
+        po.setApiseq(reFindApiseq(javaLine, true));
+        // find tokens using re
+        po.setTokens(reFindTokens(javaLine));
+//        po.printStatus();
+//        System.out.println();
+        return po;
+    }
+
+    public ParserOutput parseOnePureBody(String javaLine) throws Exception {
+        javaLine = javaLine.replace("\n" , "\t");
+        System.out.println("Received line: " + javaLine);
+        ParserOutput po = new ParserOutput();
+        po.setInputLine(javaLine);
+        try{
+            javaLine = javaLine + ";";
+            javaLine = Util.preProcess(javaLine);
+            System.out.println("Except for: " + javaLine);
+            javaLine = javaLine.replace('@', ' ');
+            po.setMethodname(reFindMethodName(javaLine));
+            // find apiseq using re
+            po.setApiseq(reFindApiseq(javaLine, false));
+            // find tokens using re
+            po.setTokens(reFindTokens(javaLine));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+//            e.printStackTrace();
+        }
         po.printStatus();
         System.out.println();
         return po;
@@ -51,41 +97,26 @@ public class JavaParser {
         return CamelCase2Underline(methodname).replace('_', ' ');
     }
 
-    public List<String> reFindApiseq(String line) {
+    public List<String> reFindApiseq(String line, boolean hasBrace) {
         // remove method name
-        Pattern inBracePattern = Pattern.compile("\\{(.*?)\\}(\\s)*$");
-        Matcher inBraceMatcher = inBracePattern.matcher(line);
-        String inBraceLine = inBraceMatcher.find() ? inBraceMatcher.group(): line;
+        if (hasBrace) {
+            Pattern inBracePattern = Pattern.compile("\\{(.*?)\\}(\\s)*$");
+            Matcher inBraceMatcher = inBracePattern.matcher(line);
+            line = inBraceMatcher.find() ? inBraceMatcher.group(): line;
+        }
         // extract sequence in the brace
-        String apiPattern = "(([A-Z]|[a-z]|\\d|$|_|\\.|\\[|\\])+)( *)\\(.*?\\)[^;|\\{|\\}]*(;|\\{|\\])+";
+        String apiPattern = "(([A-Z]|[a-z]|\\d|$|_|\\.|\\[|\\]|\\<|\\>)+)( *)\\(.*?\\)[^;|\\{|\\}]*(;|\\{|\\])+";
         List<String> apiseq = new ArrayList<String>();
         Pattern apir = Pattern.compile(apiPattern);
-        Matcher apim = apir.matcher(inBraceLine);
+        Matcher apim = apir.matcher(line);
         while (apim.find()) {
             String onecall = apim.group();
 //            System.out.println("FOUND API:" + onecall);
             apiseq.addAll(findNestedApi(onecall));
         }
         // prepare apiseq: continuous call and 'new' method
-        for (int i = 0; i < apiseq.size(); i++) {
-            String api = apiseq.get(i);
-            if (api.charAt(0) == '.') { // new
-                String lastApi = apiseq.get(i-1);
-                String head = lastApi.contains(".") ? lastApi.substring(0, lastApi.lastIndexOf('.')): lastApi;
-                apiseq.set(i, head + api);
-            }
-            api = apiseq.get(i);
-            if (api.contains(".")) {
-                String variable = api.substring(0, api.indexOf('.'));
-//                System.out.println("Found variable:" + variable);
-                Matcher mcr = Pattern.compile("(^|\\W)([A-Z](\\w|\\d|\\.)+)\\s" + variable + "\\W").matcher(line);
-                if (mcr.find()) {
-//                    System.out.println("FOUND DEFINITION :" + mcr.group(2));
-//                    System.out.println("FOUND POSITION:" + mcr.start());
-                    apiseq.set(i, mcr.group(2) + api.substring(api.indexOf('.')));
-                }
-            }
-        }
+        apiseq = extractContinuousCall(line, apiseq);
+
         return apiseq;
     }
 
@@ -100,7 +131,7 @@ public class JavaParser {
         Matcher inBraceMatcher = inBracePattern.matcher(line);
         line = inBraceMatcher.find() ? inBraceMatcher.group(): line;
         // extract sequence in the brace
-        String apiPattern = "([A-Z]|[a-z]|$|_|\\d)+";
+        String apiPattern = "([A-Z]|[a-z]|$|_)+";
         Set<String> rawTokens = new HashSet<String>();
         Pattern rawPtn = Pattern.compile(apiPattern);
         Matcher rawMatch = rawPtn.matcher(line);
@@ -131,7 +162,7 @@ public class JavaParser {
 //            System.err.println("raw:" +rawcode);
 //            System.err.println("key:" +keyword);
 
-        } else if(keyword.equals("if")||keyword.equals("while")) {
+        } else if(keyword.equals("if")||keyword.equals("while") || keyword.equals("switch")) {
             apiseqs.addAll(findNestedApi(Util.extractFromParen(rawcode)));
         } else if(keyword.equals("for")){
             rawcode = Util.extractFromParen(rawcode);
@@ -153,7 +184,7 @@ public class JavaParser {
             }
             if (rawcodeList.size() == 0) {  // only one method call without any '.'
                 List<String> innerCodeApiseq = findNestedApi(Util.extractFromParen(rawcode));
-                Matcher tmpMch = Pattern.compile("^([A-Z]|[a-z]|$|_|\\d|\\.)+$").matcher(keyword.trim());
+                Matcher tmpMch = Pattern.compile("^([A-Z]|[a-z]|$|_|\\d|\\.|\\<|\\>)+$").matcher(keyword.trim());
                 if (tmpMch.find()) {    // test real function name
                     String foreTrunc = rawcode.indexOf(keyword) >= 0 ? rawcode.substring(0, rawcode.indexOf(keyword)) : "";
 //                    System.out.println("Trunc:" + foreTrunc);
@@ -187,7 +218,8 @@ public class JavaParser {
                 "exception", "return", "if", "else", "final",
                 "new", "int", "double", "string", "list", "array", "set", "hash",
                 "try", "while", "catch", "synchronized", "exception",
-                "void", "public", "private"
+                "void", "public", "private",
+                "null"
         );
         // split camel case and generate derivatives
         Set<String> tokens = new HashSet<String>();
@@ -239,4 +271,43 @@ public class JavaParser {
     }
 
 
+    /**
+     * Expand method call name and replace variable name
+     * @param apiseq
+     * @return full API sequence
+     */
+    private static List<String> extractContinuousCall(String oriLine, List<String> apiseq) {
+        System.out.println("api" + apiseq);
+        for (int i = 0; i < apiseq.size(); i++) {
+            String api = apiseq.get(i);
+            if (api.equals("return")) continue;
+            if (api.charAt(0) == '.') {
+                String head = null;
+                if (i == 0) {
+                    Matcher matcher = Pattern.compile("\\W\\(((\\w|\\.)+)\\s+\\)(\\w+)\\)\\s*$").matcher(oriLine.substring(0, oriLine.indexOf(api)));
+                    if (matcher.find()) head = matcher.group(1);
+                } else {
+                    String lastApi = apiseq.get(i - 1);
+                    head = lastApi.contains(".") ? lastApi.substring(0, lastApi.lastIndexOf('.')) : lastApi;
+                }
+
+                apiseq.set(i, head + api);
+            }
+            api = apiseq.get(i);
+            if ( Character.isLowerCase(api.charAt(0)) && api.contains(".")) {
+                String variable = api.substring(0, api.indexOf('.'));
+                Matcher mcr = Pattern.compile("(^|\\W)((\\w|\\.)+)\\s+" + variable + "\\W").matcher(oriLine);
+                boolean found = mcr.find();
+                if (found && !mcr.group(2).contains("new")) {
+                    apiseq.set(i, mcr.group(2) + api.substring(api.indexOf('.')));
+                } else if (found && mcr.group(2).contains("new")) {
+                    apiseq.set(i, api + ".new");
+                }
+            } else if (Character.isUpperCase(api.charAt(0)) && !api.contains(".")) {
+                apiseq.set(i, api + ".new");
+            }
+
+        }
+        return apiseq;
+    }
 }
