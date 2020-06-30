@@ -1,5 +1,5 @@
 # Code-Parser-for-DeepCS
-Use regular expression to distill method name, method API call sequence and method code snippet from given raw java code
+Use regular expression to extract method name, method API call sequence and method code snippet from given raw java code
 
 ### Function
 This tool is to parse line of java code and generate parsed result that includes method name, API sequence and tokens the snippet covers.
